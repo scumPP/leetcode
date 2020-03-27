@@ -13,7 +13,7 @@
 解释: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36
 '''
 
-
+##递归+备忘录的方法
 def cuttingRope(n: int) -> int:
         F=[0 for _ in range(n+1)]
         def memorize(n):
@@ -28,4 +28,16 @@ def cuttingRope(n: int) -> int:
             return re
         re=memorize(n)
         return re
+
 print(cuttingRope(10))
+
+###动态规划的方法
+def cuttingRope_Dp(n):
+    dp=[0 for _ in range(n+1)]
+    dp[2]=1
+    for i in range(3,n+1):
+        for j in range(0,i):
+            dp[i]=max(dp[i],max(j*(i-j),j*dp[i-j]))
+    return dp[n]
+
+print(cuttingRope_Dp(10))
