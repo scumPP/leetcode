@@ -41,3 +41,27 @@ def cuttingRope_Dp(n):
     return dp[n]
 
 print(cuttingRope_Dp(10))
+
+'''
+基于贪心规则的方法：
+第一优先级： 3；把数字 n 拆成尽可能多的 3之和；
+特殊情况： 拆完后，如果余数是 1；则应把最后的 3 + 1 替换为 2 + 2，因为后者乘积更大；
+第二优先级： 2；留下的余数如果是 2，则保留，不再拆为 1+1。
+
+作者：jyd
+链接：https://leetcode-cn.com/problems/integer-break/solution/343-zheng-shu-chai-fen-tan-xin-by-jyd/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+'''
+def foundRule(n):
+    if n<3:
+        return n-1
+    a,b=n//3,n%3
+    
+    if b==0:
+        return pow(3,a)
+    elif b==1:
+        return pow(3,a-1)*4
+    else:
+        return pow(3,a)*2
+print(foundRule(10))
