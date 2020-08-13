@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "intelliSenseMode": "clang-x64",
+            "includePath": [
+                "${workspaceRoot}",
+                "D:/software/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
+                "D:/software/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
+                "D:/software/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
+                "D:/software/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+                "D:/software/LLVM/include",
+                "D:/software/LLVM/x86_64-w64-mingw32/include",
+                "D:/software/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "__GNUC__=7",
+                "__cdecl=__attribute__((__cdecl__))"
+            ],
+            "browse": {
+                "path": [
+                    "D:/software/LLVM/x86_64-w64-mingw32/include",
+                    "D:/software/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+                    "D:/software/LLVM/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
+                    "D:/software/LLVM/include/*",
+                    "${workspaceRoot}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "compilerPath": "D:/software/LLVM/bin/gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "gnu++14"
+
+        }
+    ],
+    "version": 4
+}
